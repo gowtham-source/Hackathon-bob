@@ -1,0 +1,12 @@
+{
+  "tables": [
+    {"tab_id": "tab:base_to_novel", "section": "results", "required": true,  "data_source": "results/_index.json#base_to_novel", "intent": "Headline base-to-novel comparison across 11 datasets"},
+    {"tab_id": "tab:few_shot",      "section": "results", "required": true,  "data_source": "results/_index.json#few_shot_16_shot", "intent": "16-shot accuracy across 11 datasets"},
+    {"tab_id": "tab:cross_dataset", "section": "results", "required": true,  "data_source": "results/_index.json#cross_dataset", "intent": "Cross-dataset transfer from ImageNet to 10 targets"},
+    {"tab_id": "tab:imagenet_var",  "section": "results", "required": true,  "data_source": "results/_index.json#imagenet_variants", "intent": "Robustness on 4 ImageNet domain-shift variants"},
+    {"tab_id": "tab:efficiency",    "section": "results", "required": true,  "data_source": "results/_index.json#parameter_efficiency", "intent": "Trainable parameters vs. headline accuracy"},
+    {"tab_id": "tab:abl_components","section": "results", "required": true,  "data_source": "results/_index.json#ablation_components", "intent": "Component ablation: SRRA and PRC contributions"},
+    {"tab_id": "tab:abl_rank_beta", "section": "results", "required": true,  "data_source": "results/_index.json#ablation_rank, ablation_beta", "intent": "Combined rank and beta ablation tables"},
+    {"tab_id": "tab:dataset_stats", "section": "experiments", "required": true, "data_source": "results/_index.json#dataset_stats", "intent": "Datasets used in our evaluation"}
+  ]
+}

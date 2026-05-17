@@ -1,0 +1,26 @@
+{
+  "fig_id": "fig3_rank_ablation",
+  "caption": "Effect of rank $r$ on harmonic mean accuracy and trainable parameters. Lower ranks maintain performance while reducing parameters.",
+  "data_source": "results/ablation_rank.json",
+  "viz_type": "line_dual_axis",
+  "narrative": "Shows that rank-4 provides optimal balance between parameter efficiency and performance, with diminishing returns beyond rank-8",
+  "axes": {
+    "x": "Rank $r$",
+    "y_left": "Harmonic Mean Accuracy (%)",
+    "y_right": "Trainable Parameters (M)"
+  },
+  "groups": ["Accuracy", "Parameters"],
+  "highlight": "rank_4",
+  "data_placeholder": {
+    "ranks": [1, 2, 4, 8, 16],
+    "accuracy": ["[NUM:?]", "[NUM:?]", "[NUM:?]", "[NUM:?]", "[NUM:?]"],
+    "params": ["[NUM:?]", "[NUM:?]", "[NUM:?]", "[NUM:?]", "[NUM:?]"]
+  },
+  "constraints": {
+    "monochrome_safe": true,
+    "min_font_pt": 8,
+    "aspect_ratio": "1.6:1",
+    "max_width_in": 3.3,
+    "mark_optimal": "rank_4"
+  }
+}

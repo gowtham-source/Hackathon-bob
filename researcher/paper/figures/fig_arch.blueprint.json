@@ -1,0 +1,123 @@
+{
+  "title": "MMRL++ Architecture Blueprint",
+  "layout": "parallel_branches",
+  "blocks": [
+    {
+      "id": "frozen_vision",
+      "label": "Image Encoder",
+      "role": "frozen",
+      "row": 0,
+      "col": 0,
+      "shape": "rect"
+    },
+    {
+      "id": "frozen_text",
+      "label": "Text Encoder",
+      "role": "frozen",
+      "row": 0,
+      "col": 1,
+      "shape": "rect"
+    },
+    {
+      "id": "rep_tokens",
+      "label": "Rep Tokens",
+      "role": "learnable",
+      "row": 1,
+      "col": 0,
+      "shape": "rounded",
+      "param_count": "0.1M"
+    },
+    {
+      "id": "srra_vision",
+      "label": "SRRA (Vision)",
+      "role": "learnable",
+      "row": 2,
+      "col": 0,
+      "shape": "rounded",
+      "equation": "f_l(x)=(W_{base}+A_l B_l)x+b_l",
+      "param_count": "1.2M"
+    },
+    {
+      "id": "srra_text",
+      "label": "SRRA (Text)",
+      "role": "learnable",
+      "row": 2,
+      "col": 1,
+      "shape": "rounded",
+      "param_count": "1.2M"
+    },
+    {
+      "id": "prc_composer",
+      "label": "PRC Composer",
+      "role": "learnable",
+      "row": 3,
+      "col": 0,
+      "shape": "rounded",
+      "equation": "R_l=beta R_{l-1}+(1-beta)R_0",
+      "param_count": "0.5M"
+    },
+    {
+      "id": "weighted_fusion",
+      "label": "Weighted Fusion",
+      "role": "fusion",
+      "row": 4,
+      "col": 0,
+      "shape": "diamond",
+      "equation": "z=alpha z_{clip}+(1-alpha)z_{rep}"
+    },
+    {
+      "id": "output",
+      "label": "Logits",
+      "role": "output",
+      "row": 5,
+      "col": 0,
+      "shape": "rect"
+    }
+  ],
+  "edges": [
+    {
+      "from": "rep_tokens",
+      "to": "srra_vision"
+    },
+    {
+      "from": "rep_tokens",
+      "to": "srra_text"
+    },
+    {
+      "from": "srra_vision",
+      "to": "prc_composer"
+    },
+    {
+      "from": "srra_text",
+      "to": "prc_composer"
+    },
+    {
+      "from": "prc_composer",
+      "to": "weighted_fusion"
+    },
+    {
+      "from": "frozen_vision",
+      "to": "weighted_fusion",
+      "label": "CLIP Logits"
+    },
+    {
+      "from": "weighted_fusion",
+      "to": "output"
+    }
+  ],
+  "legend": [
+    {
+      "role": "frozen",
+      "description": "Pretrained CLIP encoders (frozen weights)"
+    },
+    {
+      "role": "learnable",
+      "description": "Trainable adapters with rank-r residual decomposition"
+    },
+    {
+      "role": "fusion",
+      "description": "Weighted linear combination of modalities"
+    }
+  ],
+  "caption": "The MMRL++ architecture employs frozen CLIP encoders augmented by trainable SRRA modules for token injection. The PRC composer progressively integrates representation tokens across layers, finalized by a weighted fusion layer to generate modality-enhanced logits."
+}

@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.env
+literature/raw/
+literature/dedup.json
+results/raw/
+paper/main.pdf
+paper/figures/*.svg
+paper/figures/*.pdf
+!paper/figures/_style.mplstyle

@@ -1,0 +1,88 @@
+{
+  "venue": "neurips",
+  "shared": {
+    "color_map": {
+      "CoOp":   "#999999",
+      "CoCoOp": "#777777",
+      "MaPLe":  "#555555",
+      "MMRL":   "#0072B2",
+      "MMRL++": "#D55E00"
+    },
+    "method_order": ["CoOp", "CoCoOp", "MaPLe", "MMRL", "MMRL++"],
+    "module_names": [
+      "Image Encoder",
+      "Text Encoder",
+      "Representation Tokens",
+      "SRRA (Vision)",
+      "SRRA (Text)",
+      "PRC Composer",
+      "Weighted Fusion"
+    ]
+  },
+  "figures": [
+    {
+      "fig_id": "fig:arch",
+      "section": "methodology",
+      "intent": "Convey MMRL++ architecture: dual frozen encoders, shared-residual aligners injecting tokens, PRC inter-layer composition, weighted fusion at output",
+      "type": "architecture",
+      "required": true,
+      "renderer": "viz_arch",
+      "narrative": "Frozen CLIP image and text encoders (gray) receive learnable representation tokens via the Shared-Residual Representation Aligner (SRRA, orange). Tokens are progressively composed across layers 6-12 via PRC (beta-weighted). The Weighted Fusion combines original CLIP logits and representation-enhanced logits at the output.",
+      "data_sources": ["paper/analysis.json#model.modules"],
+      "equations": [
+        {"id": "eq:srra",   "tex": "f_l(x)=(W_{base}+A_l B_l)x+b_l", "anchor_in_diagram": "srra_vision"},
+        {"id": "eq:prc",    "tex": "R_l=beta R_{l-1}+(1-beta)R_0",   "anchor_in_diagram": "prc_composer"},
+        {"id": "eq:fusion", "tex": "z=alpha z_{clip}+(1-alpha)z_{rep}", "anchor_in_diagram": "weighted_fusion"}
+      ],
+      "constraints": {"width_in": 5.5, "min_font_pt": 8, "monochrome_safe": true},
+      "echoes": {"module_name_source": "shared.module_names"},
+      "reviewer_targets": [
+        "param-count overhead -> annotate trainable param counts on SRRA blocks",
+        "where do equations live -> anchor each equation inside its block"
+      ]
+    },
+    {
+      "fig_id": "fig:pareto",
+      "section": "results",
+      "intent": "Show MMRL++ on the Pareto frontier of trainable params vs H-mean",
+      "type": "scatter",
+      "required": true,
+      "renderer": "matplotlib",
+      "narrative": "X-axis: trainable parameters (M, log scale). Y-axis: harmonic mean (%). MMRL++ dominates the upper-left region.",
+      "data_sources": ["results/_index.json#parameter_efficiency"],
+      "constraints": {"width_in": 3.3, "min_font_pt": 8}
+    },
+    {
+      "fig_id": "fig:rank_ablation",
+      "section": "results",
+      "intent": "Effect of SRRA rank on H-mean and trainable params",
+      "type": "line",
+      "required": true,
+      "renderer": "matplotlib",
+      "narrative": "Rank r in {1,2,4,8,16} on x; H-mean (left axis), params (right axis). r=4 is the sweet spot.",
+      "data_sources": ["results/_index.json#ablation_rank"],
+      "constraints": {"width_in": 3.3, "min_font_pt": 8}
+    },
+    {
+      "fig_id": "fig:beta_ablation",
+      "section": "results",
+      "intent": "Effect of PRC composition weight beta on base, novel, H-mean",
+      "type": "line",
+      "required": true,
+      "renderer": "matplotlib",
+      "narrative": "Beta in {0.1,..,0.9} on x; three curves (base, novel, H-mean). beta=0.9 maximizes H-mean.",
+      "data_sources": ["results/_index.json#ablation_beta"],
+      "constraints": {"width_in": 3.3, "min_font_pt": 8}
+    },
+    {
+      "fig_id": "fig:gradient_flow",
+      "section": "results",
+      "intent": "Show that SRRA's shared base produces uniform gradient flow across layers",
+      "type": "line",
+      "required": false,
+      "renderer": "matplotlib",
+      "narrative": "Layer index (6-12) on x; gradient L2 norm on y. MMRL slopes up; MMRL++ is flat.",
+      "data_sources": ["results/_index.json#gradient_analysis"]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "stages": [
+    {
+      "n": 0,
+      "name": "intake",
+      "status": "done",
+      "checkpoint_approved": true,
+      "produced_at": "2026-05-17T07:33:19Z",
+      "artifacts": ["venue: neurips", "contribution: parameter-efficient representation alignment", "codebase: MMRL/"]
+    },
+    {
+      "n": 1,
+      "name": "analysis",
+      "status": "done",
+      "checkpoint_approved": true,
+      "produced_at": "2026-05-17T07:35:29Z",
+      "artifacts": ["paper/analysis.json"]
+    },
+    {
+      "n": 2,
+      "name": "literature",
+      "status": "done",
+      "checkpoint_approved": true,
+      "produced_at": "2026-05-17T07:44:51Z",
+      "artifacts": ["literature/shortlist.json", "paper/refs.bib", "paper/queries.json"]
+    },
+    {
+      "n": 3,
+      "name": "novelty",
+      "status": "done",
+      "checkpoint_approved": true,
+      "produced_at": "2026-05-17T07:46:54Z",
+      "artifacts": ["paper/novelty.md"]
+    },
+    {
+      "n": 4,
+      "name": "plan",
+      "status": "done",
+      "checkpoint_approved": true,
+      "produced_at": "2026-05-17T07:50:00Z",
+      "artifacts": ["plan.md"]
+    },
+    {
+      "n": 5,
+      "name": "results_runner",
+      "status": "done",
+      "checkpoint_approved": true,
+      "produced_at": "2026-05-17T07:51:47Z",
+      "artifacts": ["results/_index.json"],
+      "note": "Placeholder mode - scientist selected Option D (proceed with [NUM:?] markers)"
+    },
+    {
+      "n": 6,
+      "name": "visualization",
+      "status": "done",
+      "checkpoint_approved": true,
+      "produced_at": "2026-05-17T07:54:22Z",
+      "artifacts": ["paper/figures/*.spec.json", "paper/figures/_manifest.json", "paper/figures/_style.mplstyle"],
+      "note": "Placeholder mode - figure specs created, awaiting real data for rendering"
+    },
+    {
+      "n": 7,
+      "name": "drafting",
+      "status": "done",
+      "checkpoint_approved": true,
+      "produced_at": "2026-05-17T08:07:47Z",
+      "sections_done": [
+        "introduction",
+        "related_work",
+        "methodology",
+        "experiments",
+        "results",
+        "discussion",
+        "conclusion",
+        "broader_impact",
+        "abstract"
+      ],
+      "sections_pending": [],
+      "artifacts": [
+        "paper/main.typ",
+        "paper/sections/introduction.typ",
+        "paper/sections/related_work.typ",
+        "paper/sections/methodology.typ",
+        "paper/sections/experiments.typ",
+        "paper/sections/results.typ",
+        "paper/sections/discussion.typ",
+        "paper/sections/conclusion.typ",
+        "paper/sections/broader_impact.typ",
+        "paper/sections/abstract.typ",
+        "paper/.section_checklist.json",
+        "paper/DRAFTING_PROGRESS.md"
+      ],
+      "verification": {
+        "all_citations_verified": true,
+        "all_numbers_verified": true,
+        "placeholder_count": "~500+ [NUM:?] markers in results.typ (intentional)"
+      }
+    },
+    {
+      "n": 8,
+      "name": "assembly",
+      "status": "done",
+      "checkpoint_approved": false,
+      "produced_at": "2026-05-17T08:16:33Z",
+      "artifacts": [
+        "paper/main.pdf",
+        "paper/COMPILE_REPORT.md"
+      ],
+      "compilation": {
+        "status": "success",
+        "pdf_size_bytes": 220965,
+        "typst_version": "0.14.2",
+        "template": "vanilla_neurips_style",
+        "warnings": 10,
+        "errors": 0
+      },
+      "note": "Used vanilla Typst layout due to bloated-neurips:0.5.0 incompatibility with Typst 0.14.2"
+    }
+  ],
+  "current_stage": 8,
+  "next_stage": 9,
+  "tooling": {
+    "typst_version": "0.14.2",
+    "python_version": "3.10+",
+    "uv_available": true
+  }
+}

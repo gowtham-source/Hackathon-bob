@@ -1,0 +1,42 @@
+{
+  "queries": [
+    {
+      "id": "clip",
+      "text": "Learning Transferable Visual Models From Natural Language Supervision Radford",
+      "dimension": "foundation",
+      "max_results": 3
+    },
+    {
+      "id": "coop",
+      "text": "Learning to Prompt for Vision-Language Models Zhou CoOp",
+      "dimension": "foundation",
+      "max_results": 3
+    },
+    {
+      "id": "cocoop",
+      "text": "Conditional Prompt Learning for Vision-Language Models Zhou CoCoOp",
+      "dimension": "foundation",
+      "max_results": 3
+    },
+    {
+      "id": "lora",
+      "text": "LoRA Low-Rank Adaptation of Large Language Models Hu",
+      "dimension": "foundation",
+      "max_results": 3
+    },
+    {
+      "id": "vit",
+      "text": "An Image is Worth 16x16 Words Dosovitskiy Vision Transformer",
+      "dimension": "foundation",
+      "max_results": 3
+    },
+    {
+      "id": "transformer",
+      "text": "Attention Is All You Need Vaswani",
+      "dimension": "foundation",
+      "max_results": 3
+    }
+  ],
+  "year_min": 2017,
+  "sources": ["arxiv", "crossref", "openalex"]
+}

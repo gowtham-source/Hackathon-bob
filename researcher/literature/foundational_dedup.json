@@ -1,0 +1,684 @@
+[
+  {
+    "title": "Adaptive Compression : From Visual Data to Efficient and Transferable Models",
+    "abstract": "<jats:title>Compression adaptative : des données visuelles à des modèles efficaces et transférables</jats:title>\n                <jats:p xml:lang=\"fr\">La croissance exponentielle du contenu visuel a fait de la compression un défi fondamental dans les systèmes de communication modernes. Si les codecs traditionnels ont connu un succès remarquable, leur conception rigide limite leurs performances. La compression d'images apprise est apparue comme une alternative basée sur les données, dans laquelle les modèles minimisent directement une fonction de perte de distorsion-débit. Malgré leurs résultats, ces méthodes souffrent d'une flexibilité limitée, car les modèles sont entraînés pour atteindre un compromis fixe entre le débit et la distorsion, ainsi que d'une mauvaise généralisation dans les nouveaux domaines visuels et d'un manque de contrôle perceptif. Cette thèse vise à étudier les méthodes de compression basées sur l'apprentissage profond et à remédier aux principales limites qui entravent actuellement leur déploiement. De plus, nous allons au-delà de la définition traditionnelle de la compression, en proposant des stratégies qui améliorent l'efficacité, l'adaptabilité et les capacités de généralisation en compressant les modèles et leurs représentations internes.Dans ce contexte, nous montrons comment l'intégration de modules basés sur l'apprentissage peut améliorer considérablement les performances de compression. Cette amélioration résulte non seulement du remplacement de composants spécifiques des codecs standardisés, mais aussi de la définition de méthodes de bout en bout dans lesquelles l'ensemble du pipeline de compression est constitué de modules apprenables. Il est intéressant de noter que, dans ce dernier scénario, nous démontrons comment l'utilisation de paradigmes alternatifs basés sur des graphes peut être efficacement appliquée aux tâches de compression, tout en montrant leur potentiel en tant que structures de base polyvalentes pour l'extraction de caractéristiques visuelles.Au-delà de l'amélioration de la compression, cette thèse propose également une stratégie unifiée basée sur des adaptateurs pour surmonter les limites structurelles des codecs appris. Dans une perspective d'adaptation des modèles, nous démontrons comment les adaptateurs permettent un contrôle continu des compromis entre le taux de distorsion et la perception de la distorsion. En outre, ils améliorent la capacité de généralisation d'un modèle pré-entraîné à de nouveaux domaines visuels.Ces avancées rendent les codecs appris plus polyvalents pour des applications hétérogènes dans le monde réel.Enfin, nous démontrons comment les méthodes d'élagage des modèles et des représentations permettent non seulement de réduire la complexité d'un modèle, mais aussi d'améliorer les capacités de généralisation et de transférabilité d'un modèle pré-entraîné.Ici, la notion de compression est étendue aux modèles et à leurs représentations. Cette perspective met en évidence son rôle non seulement comme outil d'efficacité, mais aussi comme principe de conception de modèles neuronaux adaptatifs et robustes.</jats:p>",
+    "authors": [
+      "",
+      "Gabriele Spadaro"
+    ],
+    "year": null,
+    "venue": "",
+    "doi": "10.70675/ae4a7203z4b30z4b6azb64dz25b215b2f878",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.70675/ae4a7203z4b30z4b6azb64dz25b215b2f878",
+    "citations": 0,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "clip"
+  },
+  {
+    "title": "Understanding Surgical Triplet Videos Through Transferable Visual Models from Natural Language Supervision",
+    "abstract": "",
+    "authors": [
+      "Yunhao Li",
+      "Aoying Wang",
+      "Yu-Xi Xie",
+      "Qiong Wang",
+      "Xiucai Ye",
+      "Patrizia Savi",
+      "Ying Hu",
+      "Yan Pang"
+    ],
+    "year": 2026,
+    "venue": "Lecture Notes in Computer Science",
+    "doi": "10.1007/978-981-95-5764-6_38",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.1007/978-981-95-5764-6_38",
+    "citations": 0,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "clip"
+  },
+  {
+    "title": "Enhancing the Reliability of Electrocardiogram Signals for Stress Management: Learning Transferable Models from High-Resolution Electroencephalogram Supervision",
+    "abstract": "<jats:p>Stress, though often overlooked, is a significant driver behind the high suicide rates in South Korea, which leads among OECD countries with 24.1 suicides per 100,000 people. This issue is not unique to South Korea; in the United States, adolescent suicide rates have surged by 35% since 1999, now affecting 12 per 100,000 individuals. To address these alarming trends and prevent stress-related health issues, schools frequently rely on traditional checklist tests. However, these tests are often inaccurate, are time-consuming, and lack scientific rigor. Recent studies have started to explore the use of electroencephalogram (EEG) technology, which provides a scientific and quantitative measure of stress by closely monitoring brain activity. Despite its promise, electrocardiogram (ECG) signal, which also correlates with stress, has not been as thoroughly investigated. To address this problem, I propose an integrated approach that combines EEG and ECG assessments to develop a more reliable and cost-effective method for stress detection using machine learning. During the training phase, the proposed system takes both EEG and ECG signals as input and learns to map these signals into an emotion-related feature space. After training, the pre-trained network is then used to predict arousal and valence from ECG signals. Extensive experiments demonstrated that the proposed approach significantly improved performance, reducing RMSE by 8.24.</jats:p>",
+    "authors": [
+      "Yerin Cho",
+      "Esther Dettmar"
+    ],
+    "year": 2025,
+    "venue": "Journal of Student Research",
+    "doi": "10.47611/jsrhs.v14i1.8613",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.47611/jsrhs.v14i1.8613",
+    "citations": 0,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "clip"
+  },
+  {
+    "title": "Diversity Covariance-Aware Prompt Learning for Vision-Language Models",
+    "abstract": "",
+    "authors": [
+      "Zhengdong Zhou",
+      "Songlin Dong",
+      "Chenhao Ding",
+      "Xinyuan Gao",
+      "Yuhang He",
+      "Yihong Gong"
+    ],
+    "year": 2025,
+    "venue": "",
+    "doi": "10.2139/ssrn.5243477",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.2139/ssrn.5243477",
+    "citations": 0,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "coop",
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Differentiable Prompt Learning for Vision-Language Models",
+    "abstract": "",
+    "authors": [
+      "Kaiyang Zhou",
+      "Jingkang Yang",
+      "Chen Change Loy",
+      "Ziwei Liu"
+    ],
+    "year": 2025,
+    "venue": "Advances in Computer Vision and Pattern Recognition",
+    "doi": "10.1007/978-3-031-94969-2_5",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.1007/978-3-031-94969-2_5",
+    "citations": 0,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "coop",
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "Conditional Prompt Learning for Vision-Language Models",
+    "abstract": "",
+    "authors": [
+      "Kaiyang Zhou",
+      "Jingkang Yang",
+      "Chen Change Loy",
+      "Ziwei Liu"
+    ],
+    "year": 2022,
+    "venue": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "doi": "10.1109/cvpr52688.2022.01631",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.1109/cvpr52688.2022.01631",
+    "citations": 1493,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "coop",
+    "sources": [
+      "crossref"
+    ]
+  },
+  {
+    "title": "ID-LoRA: Intrinsic Dimension-Based Pruning with Low-Rank Adaptation for Vision-Language Models",
+    "abstract": "<jats:p>Vision-Language Models (VLMs) such as CLIP deliver strong zero-shot performance but remain computationally expensive to fine-tune, deploy, and adapt to downstream tasks. Existing pruning and parameter-efficient fine tuning (PEFT) methods address only one side of this challenge: pruning reduces the number of effective parameters but often relies on brittle heuristics, while low-rank adaptation reduces trainable parameters without removing redundant structure. We propose ID-LoRA, a unified framework that combines intrinsic-dimension (ID) estimation, structured pruning, and low-rank adaptation for efficient VLM finetuning. First, we estimate each layer's intrinsic dimension r using both MLE-based geometric estimators and SVD thresholding. We then prune entire input channels using either an SVD-QR column-selection method or a lightweight neuroscience-inspired gating module, mediodorsal Gated Effective Connectivity (MD-GEC). MD-GEC matches and in many settings slightly surpasses the pruning quality of SVD-QR while being orders of magnitude cheaper to compute. Finally, we reparameterize each pruned layer as W = W 0 S, yielding a capacity-controlled update matrix of size r2. Experiments on CLIP RN50 and ViT-B/16 across MSCOCO-2014 and Flickr8k show that ID-LoRA achieves competitive or state-of-the-art retrieval accuracy while reducing trainable parameters by up to two orders of magnitude and significantly shrinking effective model size.</jats:p>",
+    "authors": [
+      "Jessica Liang",
+      "Jianbo Shi"
+    ],
+    "year": 2025,
+    "venue": "",
+    "doi": "10.36227/techrxiv.176521385.54906010/v1",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.36227/techrxiv.176521385.54906010/v1",
+    "citations": 0,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "lora"
+  },
+  {
+    "title": "Recover-LoRA: Data-Free Accuracy Recovery of Degraded Language Models via Low-Rank Adaptation",
+    "abstract": "",
+    "authors": [
+      "Devleena Das",
+      "Rajeev Patwari",
+      "Ashish Sirasao"
+    ],
+    "year": 2025,
+    "venue": "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing: Industry Track",
+    "doi": "10.18653/v1/2025.emnlp-industry.164",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.18653/v1/2025.emnlp-industry.164",
+    "citations": 0,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "lora"
+  },
+  {
+    "title": "LoRA-CLIP: Efficient Low-Rank Adaptation of Large CLIP Foundation Model for Scene Classification",
+    "abstract": "<jats:p>Scene classification in remote sensing (RS)  imagery has been extensively investigated using both  learning-from-scratch approaches and fine-tuning of  ImageNet pre-trained models. Meanwhile, CLIP  (Contrastive Language-Image Pretraining) has emerged as  a powerful foundation model for vision-language tasks,  demonstrating remarkable zero-shot capabilities across  various domains. Its image encoder is a key component in  many vision instruction-tuning models, enabling effective  alignment of text and visual modalities for diverse tasks.  However, its potential for supervised remote sensing (RS)  scene classification remains unexplored. This work  investigates the efficient adaptation of large CLIP models  (containing over 300M parameters) through Low-Rank  Adaptation (LoRA), specifically targeting the attention  layers. By applying LoRA to CLIP's attention mechanisms,  we can effectively adapt the vision- model for specialized  scene classification tasks with minimal computational  overhead, requiring fewer training epochs than traditional  fine-tuning methods. Our extensive experiments  demonstrate the promising capabilities of LoRA-CLIP. By  training only on a small set of additional parameters LoRA-CLIP outperforms models pre-trained on ImageNet,  demonstrating the clear advantages of using image-text  pretrained backbones for scene classification.</jats:p>",
+    "authors": [
+      "Mohamad Mahmoud Al Rahhal",
+      "Yakoub Bazi",
+      "Mansour Zuair"
+    ],
+    "year": 2025,
+    "venue": "",
+    "doi": "10.36227/techrxiv.173933020.03770078/v1",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.36227/techrxiv.173933020.03770078/v1",
+    "citations": 0,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "lora"
+  },
+  {
+    "title": "An Image Equals 16x16 Words: Scaling Image Recogni:on with Transformers",
+    "abstract": "",
+    "authors": [
+      "Alexy Beyer",
+      "Luca Alexy"
+    ],
+    "year": 2025,
+    "venue": "",
+    "doi": "10.2139/ssrn.5180447",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.2139/ssrn.5180447",
+    "citations": 5,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "vit"
+  },
+  {
+    "title": "An Image is Worth Multiple Words: Multi-Attribute Inversion for Constrained Text-To-Image Synthesis",
+    "abstract": "",
+    "authors": [
+      "Aishwarya Agarwal",
+      "Srikrishna Karanam",
+      "Tripti Shukla",
+      "Balaji Vasan Srinivasan"
+    ],
+    "year": 2025,
+    "venue": "2025 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+    "doi": "10.1109/wacv61041.2025.00590",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.1109/wacv61041.2025.00590",
+    "citations": 10,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "vit"
+  },
+  {
+    "title": "Worth 1000 Words? Image-Based Conjoints and Respondent Experience",
+    "abstract": "<p>Public opinion researchers seeking to improve the ecological validity of conjoint experiments have incorporated visual media such as candidate photos, campaign posters, and videos to replace or complement text-based tables. While previous work has investigated visual delivery of racial or gender information, there has been little evaluation of how visual stimuli influence conjoint results more generally. This note identifies three areas where the introduction of images might affect candidate choice experiments: parameter estimation, conjoint task difficulty, and the introduction of additional features not intended by the research design. Analysis of a split-sample conjoint experiment where respondents were randomly assigned an image or table-based version of an otherwise identical candidate choice experiment show that there was little difference in parameter estimates between the table and image-based group, respondents demonstrated greater difficulty completing the image-based task, and unintended features introduced by candidate photos did not systematically affect respondent behavior. The main trade-off that researchers should consider when selecting the medium of their conjoint treatment is therefore between the realism of the task and its difficulty.</p>",
+    "authors": [
+      "Jacob R Turner"
+    ],
+    "year": 2025,
+    "venue": "",
+    "doi": "10.31219/osf.io/9xswa_v1",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.31219/osf.io/9xswa_v1",
+    "citations": 0,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "vit"
+  },
+  {
+    "title": "Attention Is All You Need",
+    "abstract": "<jats:p>The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.</jats:p>",
+    "authors": [
+      "Ashish Vaswani",
+      "Noam Shazeer",
+      "Niki Parmar",
+      "Jakob Uszkoreit",
+      "Llion Jones",
+      "Aidan N.Gomez",
+      "Lukasz Kaiser",
+      "Illia Polosukhin"
+    ],
+    "year": 2025,
+    "venue": "",
+    "doi": "10.65215/r5bs2d54",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.65215/r5bs2d54",
+    "citations": 8,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "transformer"
+  },
+  {
+    "title": "Attention Is All You Need",
+    "abstract": "<jats:p>The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.</jats:p>",
+    "authors": [
+      "Ashish Vaswani",
+      "Noam Shazeer",
+      "Niki Parmar",
+      "Jakob Uszkoreit",
+      "Llion Jones",
+      "Aidan N.Gomez",
+      "Lukasz Kaiser",
+      "Illia Polosukhin"
+    ],
+    "year": 2025,
+    "venue": "",
+    "doi": "10.65215/2q58a426",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.65215/2q58a426",
+    "citations": 7,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "transformer"
+  },
+  {
+    "title": "Attention Is All You Need",
+    "abstract": "<jats:p>The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.</jats:p>",
+    "authors": [
+      "Ashish Vaswani",
+      "Noam Shazeer",
+      "Niki Parmar",
+      "Jakob Uszkoreit",
+      "Llion Jones",
+      "Aidan N.Gomez",
+      "Lukasz Kaiser",
+      "Illia Polosukhin"
+    ],
+    "year": 2025,
+    "venue": "",
+    "doi": "10.65215/ysbyhc05",
+    "arxiv_id": "",
+    "url": "https://doi.org/10.65215/ysbyhc05",
+    "citations": 8,
+    "source": "crossref",
+    "raw": {},
+    "_query_id": "transformer"
+  },
+  {
+    "title": "A survey on Image Data Augmentation for Deep Learning",
+    "abstract": "Deep convolutional neural networks have performed remarkably well on many Computer Vision tasks. However, these networks are heavily reliant on big data to avoid overfitting. Overfitting refers to the phenomenon when a network learns a function with very high variance such as to perfectly model the training data. Unfortunately, many application domains do not have access to big data, such as medical image analysis. This survey focuses on Data Augmentation, a data-space solution to the problem of limited data. Data Augmentation encompasses a suite of techniques that enhance the size and quality of training datasets such that better Deep Learning models can be built using them. The image augmentation algorithms discussed in this survey include geometric transformations, color space augmentations, kernel filters, mixing images, random erasing, feature space augmentation, adversarial training, generative adversarial networks, neural style transfer, and meta-learning. The application of augmentation methods based on GANs are heavily covered in this survey. In addition to augmentation techniques, this paper will briefly discuss other characteristics of Data Augmentation such as test-time augmentation, resolution impact, final dataset size, and curriculum learning. This survey will present existing methods for Data Augmentation, promising developments, and meta-level decisions for implementing Data Augmentation. Readers will understand how Data Augmentation can improve the performance of their models and expand limited datasets to take advantage of the capabilities of big data.",
+    "authors": [
+      "Connor Shorten",
+      "Taghi M. Khoshgoftaar"
+    ],
+    "year": 2019,
+    "venue": "Journal Of Big Data",
+    "doi": "10.1186/s40537-019-0197-0",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W2954996726",
+    "citations": 12157,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "clip"
+  },
+  {
+    "title": "ChatGPT for good? On opportunities and challenges of large language models for education",
+    "abstract": "",
+    "authors": [
+      "Enkelejda Kasneci",
+      "Kathrin Seßler",
+      "Stefan Küchemann",
+      "Maria Bannert",
+      "Daryna Dementieva",
+      "Frank Fischer",
+      "Urs Gasser",
+      "Georg Groh",
+      "Stephan Günnemann",
+      "Eyke Hüllermeier",
+      "Stephan Krusche",
+      "Gitta Kutyniok",
+      "Tilman Michaeli",
+      "Claudia Nerdel",
+      "Jürgen Pfeffer",
+      "Oleksandra Poquet",
+      "Michael Sailer",
+      "Albrecht Schmidt",
+      "Tina Seidel",
+      "Matthias Stadler",
+      "J. Weller",
+      "Jochen Kühn",
+      "Gjergji Kasneci"
+    ],
+    "year": 2023,
+    "venue": "Learning and Individual Differences",
+    "doi": "10.1016/j.lindif.2023.102274",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W4323655724",
+    "citations": 4716,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "clip"
+  },
+  {
+    "title": "Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing",
+    "abstract": "This article surveys and organizes research works in a new paradigm in natural language processing, which we dub “prompt-based learning.” Unlike traditional supervised learning, which trains a model to take in an input x and predict an output y as P ( y|x ), prompt-based learning is based on language models that model the probability of text directly. To use these models to perform prediction tasks, the original input x is modified using a template into a textual string prompt x′ that has some unfilled slots, and then the language model is used to probabilistically fill the unfilled information to obtain a final string x̂ , from which the final output y can be derived. This framework is powerful and attractive for a number of reasons: It allows the language model to be pre-trained on massive amounts of raw text, and by defining a new prompting function the model is able to perform few-shot or even zero-shot learning, adapting to new scenarios with few or no labeled data. In this article, we introduce the basics of this promising paradigm, describe a unified set of mathematical notations that can cover a wide variety of existing work, and organize existing work along several dimensions, e.g., the choice of pre-trained language models, prompts, and tuning strategies. To make the field more accessible to interested beginners, we not only make a systematic review of existing works and a highly structured typology of prompt-based concepts but also release other resources, e.g., a website NLPedia–Pretrain including constantly updated survey and paperlist.",
+    "authors": [
+      "Pengfei Liu",
+      "Weizhe Yuan",
+      "Jinlan Fu",
+      "Zhengbao Jiang",
+      "Hiroaki Hayashi",
+      "Graham Neubig"
+    ],
+    "year": 2022,
+    "venue": "ACM Computing Surveys",
+    "doi": "10.1145/3560815",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W3185341429",
+    "citations": 3538,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "clip"
+  },
+  {
+    "title": "CLIP-ReID: Exploiting Vision-Language Model for Image Re-identification without Concrete Text Labels",
+    "abstract": "Pre-trained vision-language models like CLIP have recently shown superior performances on various downstream tasks, including image classification and segmentation. However, in fine-grained image re-identification (ReID), the labels are indexes, lacking concrete text descriptions. Therefore, it remains to be determined how such models could be applied to these tasks. This paper first finds out that simply fine-tuning the visual model initialized by the image encoder in CLIP, has already obtained competitive performances in various ReID tasks. Then we propose a two-stage strategy to facilitate a better visual representation. The key idea is to fully exploit the cross-modal description ability in CLIP through a set of learnable text tokens for each ID and give them to the text encoder to form ambiguous descriptions. In the first training stage, image and text encoders from CLIP keep fixed, and only the text tokens are optimized from scratch by the contrastive loss computed within a batch. In the second stage, the ID-specific text tokens and their encoder become static, providing constraints for fine-tuning the image encoder. With the help of the designed loss in the downstream task, the image encoder is able to represent data as vectors in the feature embedding accurately. The effectiveness of the proposed strategy is validated on several datasets for the person or vehicle ReID tasks. Code is available at https://github.com/Syliz517/CLIP-ReID.",
+    "authors": [
+      "Siyuan Li",
+      "Sun Li",
+      "Qingli Li"
+    ],
+    "year": 2023,
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "doi": "10.1609/aaai.v37i1.25225",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W4382460786",
+    "citations": 231,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "coop"
+  },
+  {
+    "title": "Progress and prospects of the human–robot collaboration",
+    "abstract": "",
+    "authors": [
+      "Arash Ajoudani",
+      "Andrea Maria Zanchettin",
+      "Serena Ivaldi",
+      "Alin Albu‐Schäffer",
+      "Kazuhiro Kosuge",
+      "Oussama Khatib"
+    ],
+    "year": 2017,
+    "venue": "Autonomous Robots",
+    "doi": "10.1007/s10514-017-9677-2",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W2765218414",
+    "citations": 761,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "coop"
+  },
+  {
+    "title": "Role of Digital Transformation for Achieving Sustainability: Mediated Role of Stakeholders, Key Capabilities, and Technology",
+    "abstract": "Sustainability through digital transformation is essential for contemporary businesses. Embracing sustainability, micro-, small-, and medium-sized enterprises (MSMEs) can gain a competitive advantage, attracting customers and investors who share these values. Moreover, incorporating sustainable practices empowers MSMEs to drive innovation, reduce costs, and enhance their reputation. This study aims to identify how owners or senior managers of MSMEs can initiate a sustainable digital transformation project. A systematic literature review was carried out, including 59 publications from 2019 to 2023. As a result, this research identifies the first steps owners of MSMEs can take to begin the transition by identifying critical organizational capabilities necessary for successful transformation, explores the technologies that can support MSMEs in their sustainability goals, and emphasizes the significance of stakeholders in achieving a successful digital transformation journey. Firstly, owners or senior managers should change the organizational culture to support decisions and strategies focus on sustainability. Secondly, the leading role of stakeholders is in the innovation process that allows businesses to be more competitive locally and globally. Finally, big data is the technology that can provide the most significant benefit to MSMEs because it will enable analyzing data of all kinds and contributes disruptively to decision-making.",
+    "authors": [
+      "Rafael Martínez-Peláez",
+      "Alberto Ochoa-Brust",
+      "Solange Ivette Rivera Manrique",
+      "Vanessa G. Félix",
+      "Rodolfo Ostos",
+      "Héctor Brito",
+      "Ramón A. Félix",
+      "Luis J. Mena"
+    ],
+    "year": 2023,
+    "venue": "Sustainability",
+    "doi": "10.3390/su151411221",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W4384828690",
+    "citations": 492,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "coop"
+  },
+  {
+    "title": "Unleashing the potential of prompt engineering for large language models",
+    "abstract": "This comprehensive review delves into the pivotal role of prompt engineering in unleashing the capabilities of Large Language Models (LLMs). The development of Artificial Intelligence (AI), from its inception in the 1950s to the emergence of advanced neural networks and deep learning architectures, has made a breakthrough in LLMs, with models such as GPT-4o and Claude-3, and in Vision-Language Models (VLMs), with models such as CLIP and ALIGN. Prompt engineering is the process of structuring inputs, which has emerged as a crucial technique to maximize the utility and accuracy of these models. This paper explores both foundational and advanced methodologies of prompt engineering, including techniques such as self-consistency, chain-of-thought, and generated knowledge, which significantly enhance model performance. Additionally, it examines the prompt method of VLMs through innovative approaches such as Context Optimization (CoOp), Conditional Context Optimization (CoCoOp), and Multimodal Prompt Learning (MaPLe). Critical to this discussion is the aspect of AI security, particularly adversarial attacks that exploit vulnerabilities in prompt engineering. Strategies to mitigate these risks and enhance model robustness are thoroughly reviewed. The evaluation of prompt methods is also addressed through both subjective and objective metrics, ensuring a robust analysis of their efficacy. This review also reflects the essential role of prompt engineering in advancing AI capabilities, providing a structured framework for future research and application.",
+    "authors": [
+      "B.‐C. CHEN",
+      "Zhaofeng Zhang",
+      "Nicolas Langrené",
+      "Shengxin Zhu"
+    ],
+    "year": 2023,
+    "venue": "arXiv (Cornell University)",
+    "doi": "10.48550/arxiv.2310.14735",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W4387929411",
+    "citations": 134,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "cocoop"
+  },
+  {
+    "title": "LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention",
+    "abstract": "We present LLaMA-Adapter, a lightweight adaption method to efficiently fine-tune LLaMA into an instruction-following model. Using 52K self-instruct demonstrations, LLaMA-Adapter only introduces 1.2M learnable parameters upon the frozen LLaMA 7B model, and costs less than one hour for fine-tuning on 8 A100 GPUs. Specifically, we adopt a set of learnable adaption prompts, and prepend them to the word tokens at higher transformer layers. Then, a zero-initialized attention mechanism with zero gating is proposed, which adaptively injects the new instructional cues into LLaMA, while effectively preserves its pre-trained knowledge. With our efficient training, LLaMA-Adapter can generate high-quality responses, comparable to Alpaca with fully fine-tuned 7B parameters. Besides language commands, our approach can be simply extended to multi-modal instructions for learning image-conditioned LLaMA model, which achieves superior reasoning performance on ScienceQA and COCO Caption benchmarks. Furthermore, we also evaluate the zero-initialized attention mechanism for fine-tuning other pre-trained models (ViT, RoBERTa) on traditional vision and language tasks, demonstrating the superior generalization capacity of our approach. Code is released at https://github.com/OpenGVLab/LLaMA-Adapter.",
+    "authors": [
+      "Renrui Zhang",
+      "Jiaming Han",
+      "Liu, Chris",
+      "Peng Gao",
+      "Aojun Zhou",
+      "Xiangfei Hu",
+      "Shilin Yan",
+      "Pan Lu",
+      "Hongsheng Li",
+      "Yu Qiao"
+    ],
+    "year": 2023,
+    "venue": "arXiv (Cornell University)",
+    "doi": "10.48550/arxiv.2303.16199",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W4361229539",
+    "citations": 167,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "cocoop"
+  },
+  {
+    "title": "Conditional Prompt Learning for Vision-Language Models",
+    "abstract": "With the rise of powerful pre-trained vision-language models like CLIP, it becomes essential to investigate ways to adapt these models to downstream datasets. A recently proposed method named Context Optimization (CoOp) introduces the concept of prompt learning -- a recent trend in NLP -- to the vision domain for adapting pre-trained vision-language models. Specifically, CoOp turns context words in a prompt into a set of learnable vectors and, with only a few labeled images for learning, can achieve huge improvements over intensively-tuned manual prompts. In our study we identify a critical problem of CoOp: the learned context is not generalizable to wider unseen classes within the same dataset, suggesting that CoOp overfits base classes observed during training. To address the problem, we propose Conditional Context Optimization (CoCoOp), which extends CoOp by further learning a lightweight neural network to generate for each image an input-conditional token (vector). Compared to CoOp's static prompts, our dynamic prompts adapt to each instance and are thus less sensitive to class shift. Extensive experiments show that CoCoOp generalizes much better than CoOp to unseen classes, even showing promising transferability beyond a single dataset; and yields stronger domain generalization performance as well. Code is available at https://github.com/KaiyangZhou/CoOp.",
+    "authors": [
+      "Kaiyang Zhou",
+      "Jingkang Yang",
+      "Chen Change Loy",
+      "Ziwei Liu"
+    ],
+    "year": 2022,
+    "venue": "arXiv (Cornell University)",
+    "doi": "10.48550/arxiv.2203.05557",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W4226427271",
+    "citations": 73,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "cocoop"
+  },
+  {
+    "title": "Parameter-efficient fine-tuning of large-scale pre-trained language models",
+    "abstract": "Abstract With the prevalence of pre-trained language models (PLMs) and the pre-training–fine-tuning paradigm, it has been continuously shown that larger models tend to yield better performance. However, as PLMs scale up, fine-tuning and storing all the parameters is prohibitively costly and eventually becomes practically infeasible. This necessitates a new branch of research focusing on the parameter-efficient adaptation of PLMs, which optimizes a small portion of the model parameters while keeping the rest fixed, drastically cutting down computation and storage costs. In general, it demonstrates that large-scale models could be effectively stimulated by the optimization of a few parameters. Despite the various designs, here we discuss and analyse the approaches under a more consistent and accessible term ‘delta-tuning’, where ‘delta’ a mathematical notation often used to denote changes, is borrowed to refer to the portion of parameters that are ‘changed’ during training. We formally describe the problem and propose a unified categorization criterion for existing delta-tuning methods to explore their correlations and differences. We also discuss the theoretical principles underlying the effectiveness of delta-tuning and interpret them from the perspectives of optimization and optimal control. Furthermore, we provide a holistic empirical study on over 100 natural language processing tasks and investigate various aspects of delta-tuning. With comprehensive study and analysis, our research demonstrates the theoretical and practical properties of delta-tuning in the adaptation of PLMs.",
+    "authors": [
+      "Ning Ding",
+      "Yujia Qin",
+      "Guang Yang",
+      "Fuchao Wei",
+      "Zonghan Yang",
+      "Yusheng Su",
+      "Shengding Hu",
+      "Yulin Chen",
+      "Chi-Min Chan",
+      "Weize Chen",
+      "Jing Yi",
+      "Weilin Zhao",
+      "Xiaozhi Wang",
+      "Zhiyuan Liu",
+      "Hai-Tao Zheng",
+      "Jianfei Chen",
+      "Yang Liu",
+      "Jie Tang",
+      "Juanzi Li",
+      "Maosong Sun"
+    ],
+    "year": 2023,
+    "venue": "Nature Machine Intelligence",
+    "doi": "10.1038/s42256-023-00626-4",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W4322766882",
+    "citations": 868,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "lora"
+  },
+  {
+    "title": "Edge Intelligence: Paving the Last Mile of Artificial Intelligence With Edge Computing",
+    "abstract": "With the breakthroughs in deep learning, the recent years have witnessed a booming of artificial intelligence (AI) applications and services, spanning from personal assistant to recommendation systems to video/audio surveillance. More recently, with the proliferation of mobile computing and Internet of Things (IoT), billions of mobile and IoT devices are connected to the Internet, generating zillions bytes of data at the network edge. Driving by this trend, there is an urgent need to push the AI frontiers to the network edge so as to fully unleash the potential of the edge big data. To meet this demand, edge computing, an emerging paradigm that pushes computing tasks and services from the network core to the network edge, has been widely recognized as a promising solution. The resulted new interdiscipline, edge AI or edge intelligence (EI), is beginning to receive a tremendous amount of interest. However, research on EI is still in its infancy stage, and a dedicated venue for exchanging the recent advances of EI is highly desired by both the computer system and AI communities. To this end, we conduct a comprehensive survey of the recent research efforts on EI. Specifically, we first review the background and motivation for AI running at the network edge. We then provide an overview of the overarching architectures, frameworks, and emerging key technologies for deep learning model toward training/inference at the network edge. Finally, we discuss future research opportunities on EI. We believe that this survey will elicit escalating attentions, stimulate fruitful discussions, and inspire further research ideas on EI.",
+    "authors": [
+      "Zhi Zhou",
+      "Xu Chen",
+      "En Li",
+      "Liekang Zeng",
+      "Ke Luo",
+      "Junshan Zhang"
+    ],
+    "year": 2019,
+    "venue": "Proceedings of the IEEE",
+    "doi": "10.1109/jproc.2019.2918951",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W2950865323",
+    "citations": 2122,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "lora"
+  },
+  {
+    "title": "A comprehensive survey on support vector machine classification: Applications, challenges and trends",
+    "abstract": "",
+    "authors": [
+      "Jair Cervantes",
+      "Farid García‐Lamont",
+      "Lisbeth Rodríguez-Mazahua",
+      "Asdrúbal López‐Chau"
+    ],
+    "year": 2020,
+    "venue": "Neurocomputing",
+    "doi": "10.1016/j.neucom.2019.10.118",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W3023211159",
+    "citations": 2234,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "lora"
+  },
+  {
+    "title": "AI-Assisted Pipeline for Dynamic Generation of Trustworthy Health Supplement Content at Scale",
+    "abstract": "Although geospatial question answering systems have received increasing attention in recent years, existing prototype systems struggle to properly answer qualitative spatial questions. In this work, we propose a unique framework for answering qualitative spatial questions, which comprises three main components: a geoparser that takes the input questions and extracts place semantic information from text, a reasoning system which is embedded with a crisp reasoner, and finally, answer extraction, which refines the solution space and generates final answers. We present an experimental design to evaluate our framework for point-based cardinal direction calculus (CDC) relations by developing an automated approach for generating three types of synthetic qualitative spatial questions. The initial evaluations of generated answers in our system are promising because a high proportion of answers were labelled correct.",
+    "authors": [
+      "Holter, Ole Magnus",
+      "Ell, Basil"
+    ],
+    "year": 2018,
+    "venue": "DROPS (Schloss Dagstuhl – Leibniz Center for Informatics)",
+    "doi": "10.4230/lipics.cosit.2022.18",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W2896457183",
+    "citations": 45559,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "vit",
+    "sources": [
+      "openalex"
+    ]
+  },
+  {
+    "title": "Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers",
+    "abstract": "Most recent semantic segmentation methods adopt a fully-convolutional network (FCN) with an encoder-decoder architecture. The encoder progressively reduces the spatial resolution and learns more abstract/semantic visual concepts with larger receptive fields. Since context modeling is critical for segmentation, the latest efforts have been focused on increasing the receptive field, through either dilated/atrous convolutions or inserting attention modules. However, the encoder-decoder based FCN architecture remains unchanged. In this paper, we aim to provide an alternative perspective by treating semantic segmentation as a sequence-to-sequence prediction task. Specifically, we deploy a pure transformer (i.e., without convolution and resolution reduction) to encode an image as a sequence of patches. With the global context modeled in every layer of the transformer, this encoder can be combined with a simple decoder to provide a powerful segmentation model, termed SEgmentation TRansformer (SETR). Extensive experiments show that SETR achieves new state of the art on ADE20K (50.28% mIoU), Pascal Context (55.83% mIoU) and competitive results on Cityscapes. Particularly, we achieve the first position in the highly competitive ADE20K test server leaderboard on the day of submission.",
+    "authors": [
+      "Sixiao Zheng",
+      "Jiachen Lu",
+      "Hengshuang Zhao",
+      "Xiatian Zhu",
+      "Zekun Luo",
+      "Yabiao Wang",
+      "Yanwei Fu",
+      "Jianfeng Feng",
+      "Tao Xiang",
+      "Philip H. S. Torr",
+      "Li Zhang"
+    ],
+    "year": 2021,
+    "venue": "",
+    "doi": "10.1109/cvpr46437.2021.00681",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W3170841864",
+    "citations": 3494,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "vit"
+  },
+  {
+    "title": "Segment anything in medical images",
+    "abstract": "Medical image segmentation is a critical component in clinical practice, facilitating accurate diagnosis, treatment planning, and disease monitoring. However, existing methods, often tailored to specific modalities or disease types, lack generalizability across the diverse spectrum of medical image segmentation tasks. Here we present MedSAM, a foundation model designed for bridging this gap by enabling universal medical image segmentation. The model is developed on a large-scale medical image dataset with 1,570,263 image-mask pairs, covering 10 imaging modalities and over 30 cancer types. We conduct a comprehensive evaluation on 86 internal validation tasks and 60 external validation tasks, demonstrating better accuracy and robustness than modality-wise specialist models. By delivering accurate and efficient segmentation across a wide spectrum of tasks, MedSAM holds significant potential to expedite the evolution of diagnostic tools and the personalization of treatment plans.",
+    "authors": [
+      "Jun Ma",
+      "Yuting He",
+      "Feifei Li",
+      "Lin Han",
+      "Chenyu You",
+      "Bo Wang"
+    ],
+    "year": 2024,
+    "venue": "Nature Communications",
+    "doi": "10.1038/s41467-024-44824-z",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W4391109864",
+    "citations": 2256,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "vit"
+  },
+  {
+    "title": "Is Attention All You Need?",
+    "abstract": "",
+    "authors": [
+      "Patrick Mineault"
+    ],
+    "year": 2025,
+    "venue": "",
+    "doi": "10.1007/978-3-031-84300-6_13",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W4412428247",
+    "citations": 45,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "transformer"
+  },
+  {
+    "title": "MizAR 60 for Mizar 50",
+    "abstract": "As a present to Mizar on its 50th anniversary, we develop an AI/TP system that automatically proves about 60% of the Mizar theorems in the hammer setting. We also automatically prove 75% of the Mizar theorems when the automated provers are helped by using only the premises used in the human-written Mizar proofs. We describe the methods and large-scale experiments leading to these results. This includes in particular the E and Vampire provers, their ENIGMA and Deepire learning modifications, a number of learning-based premise selection methods, and the incremental loop that interleaves growing a corpus of millions of ATP proofs with training increasingly strong AI/TP systems on them. We also present a selection of Mizar problems that were proved automatically.",
+    "authors": [
+      "Jakubův, Jan",
+      "Chvalovský, Karel",
+      "Goertzel, Zarathustra",
+      "Kaliszyk, Cezary",
+      "Olšák, Mirek",
+      "Piotrowski, Bartosz",
+      "Schulz, Stephan",
+      "Suda, Martin",
+      "Urban, Josef"
+    ],
+    "year": 2023,
+    "venue": "DROPS (Schloss Dagstuhl – Leibniz Center for Informatics)",
+    "doi": "10.4230/lipics.itp.2023.19",
+    "arxiv_id": "",
+    "url": "https://openalex.org/W4385245566",
+    "citations": 75682,
+    "source": "openalex",
+    "raw": {},
+    "_query_id": "transformer"
+  }
+]

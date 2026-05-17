@@ -1,0 +1,28 @@
+{
+  "fig_id": "fig2_pareto",
+  "caption": "Parameter-performance Pareto frontier comparing MMRL++ to baselines. MMRL++ achieves superior trade-offs between trainable parameters and harmonic mean accuracy on base-to-novel generalization.",
+  "data_source": "results/_index.json",
+  "viz_type": "scatter",
+  "narrative": "Demonstrates that MMRL++ achieves better parameter efficiency than MMRL and MaPLe while maintaining competitive or superior performance",
+  "axes": {
+    "x": "Trainable Parameters (M)",
+    "y": "Harmonic Mean Accuracy (%)"
+  },
+  "groups": ["CoOp", "CoCoOp", "MaPLe", "MMRL", "MMRL++"],
+  "highlight": "MMRL++",
+  "data_placeholder": {
+    "CoOp": {"params": "[NUM:?]", "accuracy": "[NUM:?]"},
+    "CoCoOp": {"params": "[NUM:?]", "accuracy": "[NUM:?]"},
+    "MaPLe": {"params": "[NUM:?]", "accuracy": "[NUM:?]"},
+    "MMRL": {"params": "[NUM:?]", "accuracy": "[NUM:?]"},
+    "MMRL++": {"params": "[NUM:?]", "accuracy": "[NUM:?]"}
+  },
+  "constraints": {
+    "monochrome_safe": true,
+    "min_font_pt": 8,
+    "aspect_ratio": "1.6:1",
+    "max_width_in": 3.3,
+    "show_pareto_curve": true,
+    "annotate_points": true
+  }
+}

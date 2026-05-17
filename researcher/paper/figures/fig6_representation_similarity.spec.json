@@ -1,0 +1,29 @@
+{
+  "fig_id": "fig6_representation_similarity",
+  "caption": "Representation similarity matrix across layers using Centered Kernel Alignment (CKA). Progressive composition creates structured inter-layer dependencies.",
+  "data_source": "results/representation_similarity.json",
+  "viz_type": "heatmap",
+  "narrative": "Visualizes how PRC creates progressive semantic flow across layers, with higher similarity between adjacent layers compared to baseline CLIP",
+  "axes": {
+    "x": "Layer $i$",
+    "y": "Layer $j$"
+  },
+  "groups": ["MMRL++", "CLIP (baseline)"],
+  "highlight": "MMRL++",
+  "data_placeholder": {
+    "methods": ["MMRL++", "CLIP"],
+    "layers": [6, 7, 8, 9, 10, 11, 12],
+    "cka_matrix": "[[NUM:?] for each method, 7×7 symmetric matrix]"
+  },
+  "constraints": {
+    "monochrome_safe": true,
+    "min_font_pt": 8,
+    "aspect_ratio": "1.0:1",
+    "max_width_in": 3.3,
+    "colormap": "RdBu_r",
+    "show_colorbar": true,
+    "vmin": 0,
+    "vmax": 1,
+    "side_by_side": true
+  }
+}

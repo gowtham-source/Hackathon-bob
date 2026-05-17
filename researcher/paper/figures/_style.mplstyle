@@ -1,0 +1,50 @@
+# NeurIPS-compatible matplotlib style
+# Optimized for print quality and monochrome safety
+
+# Figure size and DPI
+figure.figsize: 3.3, 2.0
+figure.dpi: 300
+savefig.dpi: 300
+savefig.bbox: tight
+savefig.pad_inches: 0.05
+
+# Font settings
+font.family: serif
+font.serif: Times New Roman, DejaVu Serif
+font.size: 8
+axes.labelsize: 8
+axes.titlesize: 9
+xtick.labelsize: 7
+ytick.labelsize: 7
+legend.fontsize: 7
+
+# Line and marker settings
+lines.linewidth: 1.2
+lines.markersize: 4
+patch.linewidth: 0.5
+
+# Axes settings
+axes.linewidth: 0.8
+axes.grid: False
+axes.spines.top: False
+axes.spines.right: False
+axes.labelpad: 4
+
+# Grid settings (when enabled)
+grid.linewidth: 0.5
+grid.alpha: 0.3
+
+# Legend settings
+legend.frameon: False
+legend.loc: best
+
+# Color cycle (monochrome-safe)
+axes.prop_cycle: cycler('color', ['000000', '555555', '999999', 'CCCCCC']) + cycler('linestyle', ['-', '--', '-.', ':'])
+
+# Tick settings
+xtick.major.width: 0.8
+ytick.major.width: 0.8
+xtick.minor.width: 0.5
+ytick.minor.width: 0.5
+xtick.direction: in
+ytick.direction: in

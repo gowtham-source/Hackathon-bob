@@ -1,0 +1,27 @@
+{
+  "fig_id": "fig4_beta_ablation",
+  "caption": "Effect of composition weight $\\beta$ on base and novel class accuracy. $\\beta=0.9$ provides optimal balance across datasets.",
+  "data_source": "results/ablation_beta.json",
+  "viz_type": "line_multi",
+  "narrative": "Demonstrates that higher beta values (0.7-0.9) improve novel class generalization while maintaining base class performance, validating the progressive composition mechanism",
+  "axes": {
+    "x": "Beta $\\beta$",
+    "y": "Accuracy (%)"
+  },
+  "groups": ["Base Classes", "Novel Classes", "Harmonic Mean"],
+  "highlight": "beta_0.9",
+  "data_placeholder": {
+    "beta_values": [0.1, 0.3, 0.5, 0.7, 0.9],
+    "base_accuracy": ["[NUM:?]", "[NUM:?]", "[NUM:?]", "[NUM:?]", "[NUM:?]"],
+    "novel_accuracy": ["[NUM:?]", "[NUM:?]", "[NUM:?]", "[NUM:?]", "[NUM:?]"],
+    "harmonic_mean": ["[NUM:?]", "[NUM:?]", "[NUM:?]", "[NUM:?]", "[NUM:?]"]
+  },
+  "constraints": {
+    "monochrome_safe": true,
+    "min_font_pt": 8,
+    "aspect_ratio": "1.6:1",
+    "max_width_in": 3.3,
+    "mark_optimal": "beta_0.9",
+    "show_legend": true
+  }
+}

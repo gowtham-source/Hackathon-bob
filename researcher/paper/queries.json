@@ -1,0 +1,100 @@
+{
+  "queries": [
+    {
+      "id": "q1",
+      "text": "vision-language models prompt learning CLIP adaptation few-shot learning",
+      "dimension": "problem",
+      "max_results": 30
+    },
+    {
+      "id": "q2",
+      "text": "parameter-efficient fine-tuning vision transformers LoRA adapter",
+      "dimension": "method",
+      "max_results": 30
+    },
+    {
+      "id": "q3",
+      "text": "multi-modal representation learning visual language alignment",
+      "dimension": "method",
+      "max_results": 30
+    },
+    {
+      "id": "q4",
+      "text": "base-to-novel generalization zero-shot transfer learning",
+      "dimension": "problem",
+      "max_results": 30
+    },
+    {
+      "id": "q5",
+      "text": "cross-dataset transfer domain generalization vision models",
+      "dimension": "evaluation",
+      "max_results": 30
+    },
+    {
+      "id": "q6",
+      "text": "learnable tokens prompt tuning vision language models",
+      "dimension": "method",
+      "max_results": 30
+    },
+    {
+      "id": "foundation_clip",
+      "text": "Learning Transferable Visual Models From Natural Language Supervision Radford",
+      "dimension": "foundation",
+      "max_results": 1
+    },
+    {
+      "id": "foundation_vit",
+      "text": "An Image is Worth 16x16 Words Dosovitskiy 2020",
+      "dimension": "foundation",
+      "max_results": 1
+    },
+    {
+      "id": "foundation_transformer",
+      "text": "Attention Is All You Need Vaswani 2017",
+      "dimension": "foundation",
+      "max_results": 1
+    },
+    {
+      "id": "foundation_resnet",
+      "text": "Deep Residual Learning for Image Recognition He 2015",
+      "dimension": "foundation",
+      "max_results": 1
+    },
+    {
+      "id": "foundation_lora",
+      "text": "LoRA Low-Rank Adaptation of Large Language Models Hu 2021",
+      "dimension": "foundation",
+      "max_results": 1
+    },
+    {
+      "id": "foundation_coop",
+      "text": "Learning to Prompt for Vision-Language Models Zhou 2022 CoOp",
+      "dimension": "foundation",
+      "max_results": 1
+    },
+    {
+      "id": "foundation_cocoop",
+      "text": "Conditional Prompt Learning for Vision-Language Models Zhou 2022 CoCoOp",
+      "dimension": "foundation",
+      "max_results": 1
+    },
+    {
+      "id": "foundation_maple",
+      "text": "MaPLe Multi-modal Prompt Learning Khattak 2023",
+      "dimension": "foundation",
+      "max_results": 1
+    }
+  ],
+  "year_min": 2017,
+  "sources": [
+    "arxiv",
+    "crossref",
+    "openalex",
+    "ncbi_pubmed",
+    "core",
+    "ieee",
+    "springer",
+    "elsevier",
+    "wiley"
+  ]
+}

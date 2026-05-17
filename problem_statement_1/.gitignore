@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.docsync_db/
+.env
+*.egg-info/
+dist/
+build/

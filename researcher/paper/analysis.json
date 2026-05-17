@@ -1,0 +1,283 @@
+{
+  "problem_statement": "Vision-language models like CLIP demonstrate strong zero-shot capabilities but struggle with generalization to novel classes and cross-dataset transfer. Existing prompt learning methods introduce additional parameters but lack efficient multi-modal representation alignment. MMRL++ addresses this by introducing learnable representation tokens with a parameter-efficient shared-residual design that enhances both visual and textual encoders while maintaining alignment with pre-trained CLIP features.",
+  "model": {
+    "modules": [
+      {
+        "name": "MultiModalRepresentationLearner_pp",
+        "file": "MMRL/trainers/mmrlpp.py:164-216",
+        "description": "Core module with learnable representation tokens (compound_rep_tokens) that are projected to both visual and text modalities via Shared-Residual Representation Aligner (SRRA)",
+        "params": null,
+        "key_components": [
+          "compound_rep_tokens: learnable tokens (n_rep_tokens × rep_dim)",
+          "srra_r2vproj: Shared-Residual Representation Aligner for visual projection",
+          "srra_r2tproj: Shared-Residual Representation Aligner for text projection"
+        ]
+      },
+      {
+        "name": "Shared_Residual_Representation_Aligner",
+        "file": "MMRL/trainers/mmrlpp.py:153-162",
+        "description": "Parameter-efficient module using shared base weights with layer-specific low-rank residual adaptations (LoRA-style)",
+        "params": null,
+        "architecture": "Base linear layer + per-layer residual aligners with rank-r decomposition (A @ B)"
+      },
+      {
+        "name": "Residual_Aligner",
+        "file": "MMRL/trainers/mmrlpp.py:138-151",
+        "description": "Low-rank residual adapter: weight + (A @ B) where A and B are learned matrices",
+        "params": null,
+        "rank": 4
+      },
+      {
+        "name": "CustomCLIP",
+        "file": "MMRL/trainers/mmrlpp.py:218-259",
+        "description": "Modified CLIP model integrating representation learner with frozen CLIP encoders",
+        "params": null,
+        "components": [
+          "representation_learner: MultiModalRepresentationLearner_pp",
+          "image_encoder: Modified CLIP visual encoder with representation token injection",
+          "text_encoder: Modified CLIP text encoder with representation token injection"
+        ]
+      },
+      {
+        "name": "TextEncoder_MMRLpp",
+        "file": "MMRL/trainers/mmrlpp.py:62-89",
+        "description": "Text encoder that injects representation tokens into transformer layers",
+        "params": null
+      }
+    ],
+    "total_params": null,
+    "trainable_params_description": "Only representation_learner parameters, image_encoder.proj_rep, and SRRA residual adapters (A, B matrices)",
+    "framework": "pytorch",
+    "backbone": "ViT-B/16 (CLIP)",
+    "key_hyperparameters": {
+      "n_rep_tokens": 5,
+      "rep_dim": 512,
+      "rep_layers": [6, 7, 8, 9, 10, 11, 12],
+      "proj_lora_dim": 64,
+      "res_lora_dim": 4,
+      "alpha": 0.7,
+      "beta": 0.9,
+      "reg_weight": "dataset-specific (0.01-7.0)"
+    }
+  },
+  "datasets": [
+    {
+      "name": "ImageNet",
+      "path": "configs/datasets/imagenet.yaml",
+      "splits": "train/val/test with base-to-novel split",
+      "preprocessing": "224×224, random_resized_crop, random_flip, normalize"
+    },
+    {
+      "name": "Caltech101",
+      "path": "configs/datasets/caltech101.yaml",
+      "splits": "train/test",
+      "preprocessing": "standard CLIP preprocessing"
+    },
+    {
+      "name": "OxfordPets",
+      "path": "configs/datasets/oxford_pets.yaml",
+      "splits": "train/test",
+      "preprocessing": "standard CLIP preprocessing"
+    },
+    {
+      "name": "StanfordCars",
+      "path": "configs/datasets/stanford_cars.yaml",
+      "splits": "train/test",
+      "preprocessing": "standard CLIP preprocessing"
+    },
+    {
+      "name": "OxfordFlowers",
+      "path": "configs/datasets/oxford_flowers.yaml",
+      "splits": "train/test",
+      "preprocessing": "standard CLIP preprocessing"
+    },
+    {
+      "name": "Food101",
+      "path": "configs/datasets/food101.yaml",
+      "splits": "train/test",
+      "preprocessing": "standard CLIP preprocessing"
+    },
+    {
+      "name": "FGVCAircraft",
+      "path": "configs/datasets/fgvc_aircraft.yaml",
+      "splits": "train/test",
+      "preprocessing": "standard CLIP preprocessing"
+    },
+    {
+      "name": "SUN397",
+      "path": "configs/datasets/sun397.yaml",
+      "splits": "train/test",
+      "preprocessing": "standard CLIP preprocessing"
+    },
+    {
+      "name": "DTD (DescribableTextures)",
+      "path": "configs/datasets/dtd.yaml",
+      "splits": "train/test",
+      "preprocessing": "standard CLIP preprocessing"
+    },
+    {
+      "name": "EuroSAT",
+      "path": "configs/datasets/eurosat.yaml",
+      "splits": "train/test",
+      "preprocessing": "standard CLIP preprocessing"
+    },
+    {
+      "name": "UCF101",
+      "path": "configs/datasets/ucf101.yaml",
+      "splits": "train/test",
+      "preprocessing": "standard CLIP preprocessing"
+    },
+    {
+      "name": "ImageNet-A",
+      "path": "configs/datasets/imagenet_a.yaml",
+      "splits": "test only (adversarial examples)",
+      "preprocessing": "standard CLIP preprocessing"
+    },
+    {
+      "name": "ImageNet-R",
+      "path": "configs/datasets/imagenet_r.yaml",
+      "splits": "test only (renditions)",
+      "preprocessing": "standard CLIP preprocessing"
+    },
+    {
+      "name": "ImageNet-Sketch",
+      "path": "configs/datasets/imagenet_sketch.yaml",
+      "splits": "test only (sketches)",
+      "preprocessing": "standard CLIP preprocessing"
+    },
+    {
+      "name": "ImageNetV2",
+      "path": "configs/datasets/imagenetv2.yaml",
+      "splits": "test only (distribution shift)",
+      "preprocessing": "standard CLIP preprocessing"
+    }
+  ],
+  "training": {
+    "optimizer": "adamw",
+    "lr": 0.001,
+    "scheduler": "cosine",
+    "warmup_epoch": 1,
+    "warmup_type": "constant",
+    "warmup_lr": 1e-5,
+    "loss": "MMRLpp_Loss (weighted combination of cross-entropy on original and representation-enhanced logits + cosine similarity regularization)",
+    "loss_components": [
+      "alpha * xe_loss1 (original CLIP logits)",
+      "(1-alpha) * xe_loss2 (representation-enhanced logits)",
+      "reg_weight * cossim_reg_img (image feature alignment)",
+      "reg_weight * cossim_reg_text (text feature alignment)"
+    ],
+    "batch_size": 4,
+    "test_batch_size": 250,
+    "epochs": 10,
+    "seed": "1, 2, 3 (three runs per experiment)",
+    "distributed": false,
+    "mixed_precision": "amp (automatic mixed precision)",
+    "num_workers": 8,
+    "frozen_components": [
+      "CLIP image encoder (except proj_rep and SRRA adapters)",
+      "CLIP text encoder (except representation token projections)"
+    ]
+  },
+  "evaluation": {
+    "metrics": ["accuracy"],
+    "splits": ["test"],
+    "num_seeds": 3,
+    "evaluation_modes": {
+      "base_to_novel": "Train on base classes (16-shot), test on base and novel classes separately",
+      "few_shot": "Train with 1/2/4/8/16 shots per class, test on all classes",
+      "cross_dataset": "Train on ImageNet, test on 10 target datasets + 4 ImageNet variants"
+    },
+    "inference_strategy": {
+      "base_classes": "Use fusion logits (alpha * logits + (1-alpha) * logits_rep)",
+      "novel_classes": "Use original CLIP logits only",
+      "cross_dataset_source": "Use fusion logits on ImageNet",
+      "cross_dataset_target": "Use original CLIP logits on target datasets"
+    }
+  },
+  "results": {
+    "available": [
+      "README.md mentions Model Zoo with trained weights and logs at Google Drive",
+      "parse_test_res.py script for aggregating results across seeds",
+      "Expected output structure: output/{task}/{dataset}/shots_{N}/{trainer}/{config}/seed{1,2,3}/log.txt"
+    ],
+    "missing": [
+      "No local results files in repository",
+      "No results/ directory with experimental outputs",
+      "No logs/ or outputs/ directory",
+      "No CSV/JSON files with numerical results",
+      "Results must be obtained from external Model Zoo or by running experiments"
+    ]
+  },
+  "gaps": [
+    "Missing baseline comparisons - no results for CoOp, CoCoOp, MaPLe, or other prompt learning methods in repository",
+    "Missing ablation studies - no experiments isolating SRRA vs standard projection, or varying n_rep_tokens, rep_dim, rep_layers",
+    "Missing parameter count analysis - total trainable parameters not computed",
+    "Missing computational cost analysis - FLOPs, training time, inference time not documented",
+    "Missing visualization of learned representation tokens or attention patterns",
+    "Missing statistical significance tests - only mean ± std reported via parse_test_res.py",
+    "Missing cross-dataset transfer matrix - no comprehensive table showing all source→target combinations",
+    "Missing few-shot learning curves - no plots showing performance vs number of shots",
+    "Missing hyperparameter sensitivity analysis - alpha, beta, reg_weight tuned per-dataset but no systematic study",
+    "Missing comparison between MMRL and MMRL++ on same benchmarks",
+    "Missing analysis of which layers benefit most from representation tokens",
+    "Missing failure case analysis or error analysis",
+    "No results/_index.json - must be created by running experiments or extracting from Model Zoo logs"
+  ],
+  "experimental_settings": {
+    "base_to_novel": {
+      "description": "Generalization from base to novel classes",
+      "training": "16-shot on base classes",
+      "evaluation": "Separate accuracy on base classes (H) and novel classes (HM), plus harmonic mean",
+      "datasets": 11
+    },
+    "few_shot": {
+      "description": "Low-data regime learning",
+      "shots": [1, 2, 4, 8, 16],
+      "evaluation": "Accuracy on all classes",
+      "datasets": 11
+    },
+    "cross_dataset": {
+      "description": "Domain generalization and transfer",
+      "source": "ImageNet (16-shot)",
+      "targets": [
+        "10 recognition datasets",
+        "4 ImageNet variants (A, R, Sketch, V2)"
+      ],
+      "evaluation": "Zero-shot transfer accuracy on target datasets"
+    }
+  },
+  "key_innovations": {
+    "mmrl": [
+      "Multi-modal representation tokens injected into both visual and text encoders",
+      "Learnable projection layers mapping representation space to modality-specific spaces",
+      "Cosine similarity regularization to maintain alignment with frozen CLIP features"
+    ],
+    "mmrlpp": [
+      "Shared-Residual Representation Aligner (SRRA): parameter-efficient design with shared base weights + low-rank residual adaptations",
+      "Progressive Representation Composition (PRC): inter-layer instance-specific semantic flow via beta-weighted composition",
+      "Reduced trainable parameters compared to MMRL while maintaining or improving performance"
+    ]
+  },
+  "related_work_context": {
+    "base_methods": [
+      "CLIP (Radford et al., 2021) - foundation model",
+      "CoOp (Zhou et al., 2022) - context optimization for prompts",
+      "CoCoOp (Zhou et al., 2022) - conditional context optimization",
+      "MaPLe (Khattak et al., 2023) - multi-modal prompt learning"
+    ],
+    "comparison_needed": "MMRL++ vs CoOp, CoCoOp, MaPLe, ProDA, PromptSRC, and other prompt learning methods"
+  },
+  "reproducibility": {
+    "code_available": true,
+    "pretrained_weights": "Available at Google Drive (mentioned in README)",
+    "random_seeds": [1, 2, 3],
+    "dependencies": [
+      "PyTorch 2.4.0",
+      "torchvision 0.19.0",
+      "Dassl library",
+      "Python 3.10"
+    ],
+    "hardware_requirements": "CUDA-capable GPU (multi-GPU supported via DataParallel)"
+  },
+  "produced_at": "2026-05-17T07:33:37Z"
+}

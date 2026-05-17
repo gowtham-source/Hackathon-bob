@@ -1,0 +1,39 @@
+{
+  "fig_id": "fig7_qualitative",
+  "caption": "Qualitative examples showing MMRL++ predictions on base and novel classes. Green borders indicate correct predictions, red borders indicate errors.",
+  "data_source": "results/qualitative/*.png",
+  "viz_type": "image_grid",
+  "narrative": "Demonstrates that MMRL++ successfully generalizes to novel classes with visually distinct characteristics from base classes",
+  "layout": {
+    "rows": 2,
+    "cols": 4,
+    "categories": ["Base (Correct)", "Base (Error)", "Novel (Correct)", "Novel (Error)"]
+  },
+  "groups": ["base_correct", "base_error", "novel_correct", "novel_error"],
+  "highlight": "novel_correct",
+  "data_placeholder": {
+    "images": [
+      "results/qualitative/base_correct_1.png",
+      "results/qualitative/base_correct_2.png",
+      "results/qualitative/base_error_1.png",
+      "results/qualitative/base_error_2.png",
+      "results/qualitative/novel_correct_1.png",
+      "results/qualitative/novel_correct_2.png",
+      "results/qualitative/novel_error_1.png",
+      "results/qualitative/novel_error_2.png"
+    ],
+    "labels": "[LABEL:?] for each image",
+    "predictions": "[PRED:?] for each image",
+    "confidence": "[CONF:?] for each image"
+  },
+  "constraints": {
+    "monochrome_safe": false,
+    "min_font_pt": 7,
+    "aspect_ratio": "2.0:1",
+    "max_width_in": 6.5,
+    "show_labels": true,
+    "show_predictions": true,
+    "border_color_correct": "green",
+    "border_color_error": "red"
+  }
+}

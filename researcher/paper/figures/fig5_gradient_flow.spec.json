@@ -1,0 +1,28 @@
+{
+  "fig_id": "fig5_gradient_flow",
+  "caption": "Layer-wise gradient magnitude comparison between MMRL++ and MMRL. SRRA enables more uniform gradient flow across layers.",
+  "data_source": "results/gradient_analysis.json",
+  "viz_type": "heatmap",
+  "narrative": "Shows that MMRL++'s shared-residual design produces more balanced gradient magnitudes across layers compared to MMRL's independent projections, explaining improved training stability",
+  "axes": {
+    "x": "Training Step",
+    "y": "Layer Index"
+  },
+  "groups": ["MMRL++", "MMRL"],
+  "highlight": "MMRL++",
+  "data_placeholder": {
+    "methods": ["MMRL++", "MMRL"],
+    "layers": [6, 7, 8, 9, 10, 11, 12],
+    "steps": [0, 100, 200, 300, 400, 500],
+    "gradient_magnitudes": "[[NUM:?] for each method × layer × step]"
+  },
+  "constraints": {
+    "monochrome_safe": true,
+    "min_font_pt": 8,
+    "aspect_ratio": "1.6:1",
+    "max_width_in": 3.3,
+    "colormap": "viridis",
+    "show_colorbar": true,
+    "side_by_side": true
+  }
+}

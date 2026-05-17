@@ -1,0 +1,21 @@
+= Introduction
+
+Vision-language models such as CLIP #cite(<radford2021clip>) have revolutionized zero-shot image recognition by learning transferable representations from large-scale image-text pairs. However, adapting these pre-trained models to downstream tasks while preserving their generalization capabilities remains a fundamental challenge. Recent prompt learning methods #cite(<zhou2022coop>) #cite(<zhou2022cocoop>) #cite(<khattak2023maple>) have demonstrated promising results by introducing learnable prompts or tokens into the frozen CLIP encoders, enabling efficient adaptation without full fine-tuning. Yet, these approaches face a critical trade-off: achieving strong performance often requires substantial trainable parameters, limiting deployment in resource-constrained scenarios such as edge devices or mobile applications.
+
+The parameter efficiency challenge in vision-language adaptation stems from two key limitations in existing multi-modal prompt learning methods. First, methods like MaPLe #cite(<khattak2023maple>) and MMRL #cite(<guo2025mmrl>) employ independent projection layers for each transformer layer, resulting in parameter redundancy without explicit gradient sharing across modalities and layers. Second, these approaches treat each layer's adaptation independently, missing opportunities for inter-layer semantic composition that could enhance representation quality. While parameter-efficient fine-tuning (PEFT) techniques such as LoRA #cite(<hu2021lora>) have shown success in language models, their direct application to multi-modal vision-language adaptation has not been thoroughly explored.
+
+We propose MMRL++, a parameter-efficient extension of multi-modal representation learning that addresses these limitations through two key innovations. First, we introduce the *Shared-Residual Representation Aligner* (SRRA), which employs shared base weights across layers with layer-specific low-rank residual adaptations (rank-4 LoRA-style decomposition). This design enables gradient sharing while maintaining layer-specific expressiveness, substantially reducing trainable parameters compared to methods with independent per-layer projections. Second, we propose *Progressive Representation Composition* (PRC), which creates inter-layer semantic flow through beta-weighted composition of representation tokens across transformer layers. This mechanism enhances intra-modal interaction beyond single-layer token injection, allowing instance-specific adaptation paths through the network.
+
+Our contributions are as follows:
+
+1. *Shared-Residual Representation Aligner (SRRA)*: A parameter-efficient architecture using shared base weights with layer-specific rank-4 residual adaptations, reducing trainable parameters while maintaining multi-modal alignment quality.
+
+2. *Progressive Representation Composition (PRC)*: An inter-layer composition mechanism that enables instance-specific semantic flow via beta-weighted mixing, enhancing representation quality through progressive refinement.
+
+3. *Comprehensive Evaluation*: Extensive experiments across three settings (base-to-novel generalization, few-shot learning, cross-dataset transfer) on 15 datasets, demonstrating that MMRL++ maintains or improves performance while using fewer parameters than MMRL and MaPLe.
+
+4. *Parameter Efficiency Analysis*: Detailed analysis showing MMRL++ achieves superior parameter-performance trade-offs, with ablation studies validating the contribution of each component.
+
+5. *Gradient Flow and Representation Analysis*: Visualization of gradient magnitudes and representation similarity across layers, providing insights into why SRRA and PRC improve training dynamics and generalization.
+
+The remainder of this paper is organized as follows. Section 2 reviews related work in vision-language models, prompt learning, and parameter-efficient fine-tuning. Section 3 presents the MMRL++ methodology, detailing SRRA and PRC. Section 4 describes the experimental setup. Section 5 reports results across all three evaluation settings. Section 6 discusses limitations and broader implications. Section 7 concludes with future directions.

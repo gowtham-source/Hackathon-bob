@@ -27,11 +27,11 @@ You've spent 6 months building a novel ML model. Code works. Results look promis
 
 | Page 1 — Title, Abstract & Introduction | Page 2 — Methodology & Architecture | Page 3 — Results & Tables |
 |:---:|:---:|:---:|
-| ![Page 1](researcher/paper/preview/page_1.png) | ![Page 2](researcher/paper/preview/page_2.png) | ![Page 3](researcher/paper/preview/page_3.png) |
+| ![Page 1](researcher/paper/preview/page_1.png) | ![Page 2](researcher/paper/preview/page_3.png) | ![Page 3](researcher/paper/preview/page_3.png) |
 
 > *Rough draft · Entirely AI-generated via IBM Bob (Code2Paper mode) · Not for submission*
 > Full PDF: `researcher/paper/main.pdf` (920KB)
-
+> You can also view it on: [View Paper](https://drive.google.com/file/d/1BjlkWXDOutGgcA2691BqQwCZ3IbAsF9R/view?usp=sharing)
 ---
 
 ### 🎨 Generated Figures & Diagrams
